@@ -1,5 +1,7 @@
+// import modules from mongoose
 import { Schema, model } from "mongoose"
 
+// create a schema for the student model
 const studentSchema = new Schema({
     firstName: {
         type: String,
@@ -20,4 +22,5 @@ const studentSchema = new Schema({
     }
 })
 
+// create the student model using the schema
 export default model("Student", studentSchema)

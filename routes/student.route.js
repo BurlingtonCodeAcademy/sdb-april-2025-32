@@ -1,6 +1,8 @@
+// import the necessary modules
 import { Router } from "express"
 import Student from "../models/student.model.js"
 
+// create a new router instance
 const router = Router()
 
 // GET - /api/student - get all students
@@ -142,4 +144,5 @@ router.delete("/", async (req, res) => {
     }
 })
 
+// Export the router to be used in app.js
 export default router;
