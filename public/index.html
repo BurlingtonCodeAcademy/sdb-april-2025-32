@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Student Management System</h1>
+      </header>
+
+      <main>
+        <!-- Add Student Form -->
+        <section class="form-section">
+          <h2>Add New Student</h2>
+          <form id="studentForm">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-buttons">
+              <button type="submit" id="submitBtn">Add Student</button>
+              <button
+                type="button"
+                id="cancelBtn"
+                class="cancel-btn"
+                style="display: none"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Students List -->
+        <section class="students-section">
+          <div class="students-header">
+            <h2>Students List</h2>
+            <div class="action-buttons">
+              <button id="refreshBtn" class="refresh-btn">Refresh</button>
+              <button id="deleteAllBtn" class="delete-all-btn">
+                Delete All
+              </button>
+            </div>
+          </div>
+
+          <div id="studentsContainer">
+            <div class="loading" id="loading">Loading students...</div>
+            <div id="studentsGrid"></div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Message Display -->
+      <div id="messageContainer" class="message-container"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

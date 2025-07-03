@@ -3,6 +3,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import path from 'path'
 
 // import the student route
 import studentRoute from "./routes/student.route.js"
@@ -12,6 +13,9 @@ dotenv.config()
 
 // create an instance of express
 const app = express()
+
+// serve static files from the public directory
+app.use(express.static(path.join(path.resolve(), "public")))
 
 // set the port and MongoDB connection string
 const PORT = process.env.PORT || 8080;
